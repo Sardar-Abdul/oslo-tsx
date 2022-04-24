@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { StyledApp } from "./components/styles/appStyle";
 
-function App() {
+//components
+import Topbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
+import About from "./components/pages/about";
+import Contact from "./components/pages/contact";
+import Dashboard from "./components/pages/dashboard";
+import Features from "./components/pages/features";
+import Header from "./components/pages/header";
+import Reviews from "./components/pages/reviews";
+import SignUp from "./components/pages/signUp";
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <Topbar />
+      <Header />
+      <About />
+      <Features />
+      <Dashboard />
+      <Reviews />
+      <SignUp />
+      <Contact />
+      <Footer />
+    </StyledApp>
   );
-}
+};
 
 export default App;
